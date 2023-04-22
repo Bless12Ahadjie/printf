@@ -1,0 +1,50 @@
+https://github.com/Bless12Ahadjie/printf.git
+
+git clone https://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@github.com/Bless12Ahadjie/printf.git
+
+
+
+#ifndef MAIN_H
+#define MAIN_H
+#include <stdarg.h>
+#include <stdio.h>
+#include <unistd.h>
+
+#define UNUSED(x) (void)(x)
+#define BUFF_SIZE 1024
+
+#define F_MINUS 1
+#define F_PLUS 2
+#define F_ZERO 4
+#define F_HASH 8
+#define F_SPACE 16
+
+#define S_LONG 2
+#define S_SHORT 1
+
+/**
+ * struct fmt - struct operations
+ *
+ * @fmt: takes value.
+ * @fn: Takes value.
+ */
+struct fmt
+{
+	char fmt;
+	int (*fn)(va_list, char[], int, int, int, int);
+};
+
+
+/**
+ * typedef struct fmt fmt_t - struct operation 2
+ *
+ * @fmt: Takes value
+ * @fm_t: Takes value
+ */
+typedef struct fmt fmt_t;
+
+int _printf(const char *format, ...);
+int handle_print(const char *fmt, int *i,
+va_list list, char buffer[], int flags, int width, int precision, int size);
+
+
