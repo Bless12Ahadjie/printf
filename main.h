@@ -1,9 +1,3 @@
-https://github.com/Bless12Ahadjie/printf.git
-
-git clone https://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@github.com/Bless12Ahadjie/printf.git
-
-
-
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdarg.h>
