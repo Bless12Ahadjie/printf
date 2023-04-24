@@ -47,7 +47,7 @@ int _printf(const char *format, ...)
 			printed = handle_print(format, &j, list, buffer, flags,
 					width, precision, size);
 
-			if (printed == _1)
+			if (printed == -1)
 				return (-1);
 			printed_char += printed;
 		}
