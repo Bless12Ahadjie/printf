@@ -1,15 +1,7 @@
 #include "main.h"
-/**
- * print_buffer - function that prints the content of the buffer
- * @buffer: An array of characters
- * @buff_ind: The next character index
- */
-void print_buffer(char buffer[], int *buff_ind)
-{
-	if (*buff_ind > 0)
-		write(1, &buffer[0], *buff_ind);
-	*buff_ind = 0;
-}
+
+void print_buffer(char buffer[], int *buff_ind);
+
 /**
  * _printf - function that produces output according to a format
  * @format: character string
@@ -57,4 +49,15 @@ int _printf(const char *format, ...)
 	va_end(list);
 
 	return (printed_char);
+}
+/**
+ * print_buffer - function that prints the content of the buffer
+ * @buffer: An array of characters
+ * @buff_ind: The next character index
+ */
+void print_buffer(char buffer[], int *buff_ind)
+{
+	if (*buff_ind > 0)
+		write(1, &buffer[0], *buff_ind);
+	*buff_ind = 0;
 }
