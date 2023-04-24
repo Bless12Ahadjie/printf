@@ -50,6 +50,7 @@ int _printf(const char *format, ...)
 
 	return (printed_char);
 }
+
 /**
  * print_buffer - function that prints the content of the buffer
  * @buffer: An array of characters
